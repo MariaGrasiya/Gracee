@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <body bgcolor="cyan">
+
+        
+             <a href="index2.html"><button id="back" name="Back">Back</button></a>
+             <CENTER><h1>MEMO</h1></CENTER>
+
+            
+            <CENTER><textarea id="memo" cols=75 rows=65 placeholder="Enter title:" readonly="true"></textarea></CENTER>
+            <br><br>
+            <center><button type="button" onclick="pull()"><font size="20">back here</font></button><br>
+            <a href="index2.html"><button id="memo" name="Cancel"><font size="20">Cancel</button></font></a></CENTER>
+<script>
+            function addMemo()
+            {
+                window.localStorage.setItem('Memo', document.getElementById("memo").value);
+
+                var memo = document.getElementById("memo").value;
+                var js = document.createElement('js');
+                js.innerText = memo;
+                document.getElementById("comments").appendChild(js);
+                document.getElementById("memo").value = '';
+                document.getElementById("memo").focus();
+
+            }
+            function pull(){
+                document.getElementById("memo").value=window.localStorage.getItem('Memo')
+
+            }                
+                </script>
+    </body>
+    </html>
+

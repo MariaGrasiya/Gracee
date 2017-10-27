@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+    <meta name= "viewport" content ="initial-scale =1, maximum-scale =1" />
+
+    <body bgcolor="cyan">
+
+        
+             <a href="index2.html"><button id="back" name="Back"><font size="5">Back</button></a>
+             <CENTER><h1>MEMO</h1></CENTER>
+
+            
+            <CENTER><textarea id="memo" style="resize:none" cols=80 rows=70 placeholder="Enter title:"></textarea></CENTER>
+            <br>
+            <center><button type="button" onclick="pull()"><font size="20">back here</font></button></a></center><br><br>
+            <CENTER><font size="20"><a href="index4.html"><button type="button" onclick="addMemo()">Submit</a></font></button>
+            &nbsp;
+            <a href="index2.html"><button id="memo" name="Cancel"><font size="20">Cancel</font></button></a></CENTER>
+<script>
+            function addMemo()
+            {
+                window.localStorage.setItem('Memo', document.getElementById("memo").value);
+
+                var memo = document.getElementById("memo").value;
+                // var js = document.createElement('js');
+                // js.innerText = memo;
+                // document.getElementById("comments").appendChild(js);
+                // document.getElementById("memo").value = '';
+                // document.getElementById("memo").focus();
+
+            }
+            function pull(){
+                document.getElementById("memo").value=window.localStorage.getItem('Memo')
+
+            }                
+                </script>
+    </body>
+    </html>
+
